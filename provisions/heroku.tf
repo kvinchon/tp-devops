@@ -44,3 +44,9 @@ resource "heroku_pipeline_coupling" "production" {
   pipeline = "${heroku_pipeline.devops-app.id}"
   stage    = "production"
 }
+
+# Create a database, and configure the app to use it
+resource "heroku_addon" "database" {
+  app  = "${heroku_app.staging.name}"
+  plan = "heroku-postgresql:hobby-dev"
+}
