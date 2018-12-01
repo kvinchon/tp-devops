@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"wsf/devops/handler"
+	"wsf/revisions/devops/handler"
 )
 
 func main() {
